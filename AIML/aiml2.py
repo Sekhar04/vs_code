@@ -25,7 +25,7 @@ import heapq
 # heapq.heapify(numbers)
 # print(numbers)  # Output: [5, 10, 15, 20]
 
-#Heuristic values
+# Heuristic values
 heuristic = {
     'A': 7,
     'B': 6,
@@ -55,31 +55,31 @@ graph = {
 
 import heapq
 
-# Heuristic values (h)
-heuristic = {
-    'A': 10, 'B': 8, 'C': 5, 'D': 7, 'E': 3,
-    'F': 6, 'G': 5, 'H': 3, 'I': 1, 'J': 0
-}
+# # Heuristic values (h)
+# heuristic = {
+#     'A': 10, 'B': 8, 'C': 5, 'D': 7, 'E': 3,
+#     'F': 6, 'G': 5, 'H': 3, 'I': 1, 'J': 0
+# }
 
-# Graph adjacency list with edge weights
-graph = {
-    'A': {'B': 6, 'D': 2, 'F': 3},
-    'B': {'A': 6, 'C': 3, 'D': 1},
-    'C': {'B': 3, 'E': 5},
-    'D': {'A': 2, 'B': 1, 'E': 8, 'G': 7},
-    'E': {'C': 5, 'D': 8, 'J': 5},
-    'F': {'A': 3, 'G': 1, 'H': 7},
-    'G': {'D': 7, 'F': 1, 'H': 3},
-    'H': {'F': 7, 'G': 3, 'I': 2},
-    'I': {'H': 2, 'J': 3},
-    'J': {'E': 5, 'I': 3}
-}
+# # Graph adjacency list with edge weights
+# graph = {
+#     'A': {'B': 6, 'D': 2, 'F': 3},
+#     'B': {'A': 6, 'C': 3, 'D': 1},
+#     'C': {'B': 3, 'E': 5},
+#     'D': {'A': 2, 'B': 1, 'E': 8, 'G': 7},
+#     'E': {'C': 5, 'D': 8, 'J': 5},
+#     'F': {'A': 3, 'G': 1, 'H': 7},
+#     'G': {'D': 7, 'F': 1, 'I': 3},
+#     'H': {'F': 7, 'I': 2},
+#     'I': {'G': 3, 'H': 2, 'J': 3},
+#     'J': {'E': 5, 'I': 3}
+# }
 
 def astar(graph, start, goal, heuristic):
     # Priority queue: (f, g, node, path)
     open_list = []
     heapq.heappush(open_list, (heuristic[start], 0, start, [start]))
-
+    
     while open_list:
         f, g, node, path = heapq.heappop(open_list)
 
@@ -87,14 +87,16 @@ def astar(graph, start, goal, heuristic):
         if node == goal:
             return path, g
 
+        # Explore neighbors
         for neighbor, cost in graph[node].items():
             new_g = g + cost
             new_f = new_g + heuristic[neighbor]
             heapq.heappush(open_list, (new_f, new_g, neighbor, path + [neighbor]))
+    
+    return None, float('inf')
 
-    return None, float("inf")
 
-# Example Input
+# Example Run
 path, cost = astar(graph, 'A', 'J', heuristic)
 print("Shortest Path using A*:", path)
 print("Total Cost:", cost)
