@@ -1,0 +1,182 @@
+<html>
+
+<body>
+    <h1>C. V. Raman Global University</h1>
+    <h2>Student Registration Form</h2>
+    <p>Please complete the form below to register. Fields marked with * are required</p>
+    <form>
+        <table border="1" cellpadding="5" cellspacing="0" width="70%">
+            <tr>
+                <th colspan="4" align="left">Personal Details</th>
+            </tr>
+            <tr>
+                <td width="20%">First Name *</td>
+                <td width="30%"><input type="text" name="first_name" required></td>
+                <td width="20%">Last Name *</td>
+                <td width="30%"><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth *</td>
+                <td><input type="date" name="dob" required></td>
+                <td>Gender *</td>
+                <td>
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Photo</td>
+                <td><input type="file" name="photo" accept="image/*"></td>
+                <td>Email *</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile / Phone</td>
+                <td><input type="tel" name="phone" placeholder="+91 70777 83300"></td>
+                <td>Alternate Phone</td>
+                <td><input type="tel" name="alt_phone"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left">Address</th>
+            </tr>
+            <tr>
+                <td width="20%">Address Line 1</td>
+                <td colspan="3"><input type="text" name="addr1" style="width:98%"></td>
+            </tr>
+            <tr>
+                <td>Address Line 2</td>
+                <td colspan="3"><input type="text" name="addr2" style="width:98%"></td>
+            </tr>
+            <tr>
+                <td>City / Town</td>
+                <td><input type="text" name="city"></td>
+                <td>State / Province</td>
+                <td><input type="text" name="state"></td>
+            </tr>
+            <tr>
+                <td>PIN / ZIP</td>
+                <td><input type="text" name="pin"></td>
+                <td>Country</td>
+                <td>
+                    <select name="country">
+                        <option value="">-- Select --</option>
+                        <option>India</option>
+                        <option>Bangladesh</option>
+                        <option>Nepal</option>
+                        <option>Bhutan</option>
+                        <option>Sri Lanka</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4" align="left">Academic Details</th>
+            </tr>
+            <tr>
+                <td width="20%">Program Applying For *</td>
+                <td width="30%">
+                    <select name="program" required>
+                        <option value="">-- Select Program --</option>
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                        <option>B.Sc</option>
+                        <option>M.Sc</option>
+                        <option>BBA</option>
+                        <option>MBA</option>
+                        <option>Ph.D.</option>
+                    </select>
+                </td>
+                <td width="20%">Branch / Specialization</td>
+                <td width="30%"><input type="text" name="branch"></td>
+            </tr>
+            <tr>
+                <td>Year of Study / Intake</td>
+                <td><input type="text" name="intake_year" placeholder="e.g. 2025-26"></td>
+                <td>Previous Registration No.</td>
+                <td><input type="text" name="prev_reg"></td>
+            </tr>
+            <tr>
+                <th colspan="4" align="left">Educational Qualifications (most recent)</th>
+            </tr>
+            <tr>
+                <td width="20%">Qualification</td>
+                <td width="30%"><input type="text" name="qualification" placeholder="e.g. B.Sc, 12th"></td>
+                <td width="20%">Institution</td>
+                <td width="30%"><input type="text" name="institution"></td>
+            </tr>
+            <tr>
+                <td>Year of Passing</td>
+                <td><input type="number" name="yop" min="1950" max="2100"></td>
+                <td>Marks / Grade</td>
+                <td><input type="text" name="marks" placeholder="e.g. 85% or 8.2 CGPA"></td>
+            </tr>
+            <tr>
+                <th colspan="4" align="left">Preferences &amp; Declarations</th>
+            </tr>
+            <tr>
+                <td width="20%">Require Hostel</td>
+                <td width="30%">
+                    <label><input type="checkbox" name="hostel"> Yes, I require hostel accommodation</label>
+                </td>
+                <td width="20%">Need Transport</td>
+                <td width="30%">
+                    <label><input type="checkbox" name="transport"> Yes, need campus transport</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Preferred Shift</td>
+                <td>
+                    <select name="shift">
+                        <option value="">-- Select Shift --</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+                </td>
+                <td>Remarks</td>
+                <td><textarea name="remarks" rows="3" cols="40" placeholder="Any special requests or notes"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4" align="left">Emergency Contact</th>
+            </tr>
+            <tr>
+                <td width="20%">Name</td>
+                <td width="30%"><input type="text" name="emg_name"></td>
+                <td width="20%">Phone</td>
+                <td width="30%"><input type="tel" name="emg_phone"></td>
+            </tr>
+            <tr>
+                <td>Relation</td>
+                <td><input type="text" name="emg_relation"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <label>
+                        <input type="checkbox" name="declare" required><b>
+                            I hereby declare that the information given above is true and correct to the best of my
+                            knowledge.</b>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <input type="reset" value="Reset Form">
+                    <input type="submit" value="Submit Registration">
+                </td>
+            </tr>
+
+        </table>
+        <p>For help, contact Admissions Office: <a
+                href="mailto:admissions@cgu-odisha.ac.in">admissions@cgu-odisha.ac.in</a> or call +91-674-663 6555
+        </p>
+        <p>Developers: Surendra, Jitendra.</p>
+        <p><a href="#https://cgu-odisha.ac.in" target="_blank">C. V. Raman Global University – Official Site</a></p>
+
+    </form>
+</body>
+
+</html>
