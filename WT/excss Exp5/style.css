@@ -1,0 +1,20 @@
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#special {
+  color: red;
+  font-size: 18px;
+  text-decoration: underline;
+}
